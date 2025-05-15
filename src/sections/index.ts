@@ -1,0 +1,5 @@
+export { default as MotivationalSection } from "./MotivationalSection"
+export { default as OfferSection } from "./OfferSection"
+export { default as CoursesSection } from "./CoursesSection"
+export { default as TeachersSection } from "./TeachersSection"
+export { default as FeedbackSection } from "./FeedbackSection"

@@ -1,0 +1,181 @@
+.section {
+    position: relative;
+    width: 100%;
+    height: 187rem;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.wrap {
+    position: absolute;
+    top: -21.31rem;
+    left: 0;
+    background-image: url("/public/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 30.3rem 5.8rem 0 0;
+}
+
+.container {
+    position: relative;
+    height: 126%;
+    display: grid;
+    grid-template-columns: repeat(2, 53%);
+    grid-template-rows: repeat(5, 14%);
+    grid-template-areas:
+      "personOne ."
+      "personOne personTwo"
+      "personThree personTwo"
+      "personThree personFour"
+      ". personFour";
+    justify-content: space-between;
+    align-items: center;
+}
+.person {
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.personOne {
+    position: relative;
+    grid-area: personOne;
+    text-align: left;
+    margin-left: 5rem;
+}
+
+.personOne > img {
+    width: 28.44rem;
+    height: 54.59rem;
+}
+
+.personTwo {
+    position: relative;
+    grid-area: personTwo;
+    text-align: right;
+    padding-right: 9rem;
+}
+
+.personTwo > img {
+    width: 27.2rem;
+    height: 54.38rem;
+}
+
+.personThree {
+    position: relative;
+    grid-area: personThree;
+    text-align: left;
+    padding: 5.3rem 0 0 7.8rem;
+}
+
+.personThree > img {
+    width: 25.31rem;
+    height: 54.38rem;
+}
+
+.personFour {
+    position: relative;
+    grid-area: personFour;
+    text-align: right;
+    padding: 10.4rem 5.3rem 0 0;
+}
+
+.personFour > img {
+    width: 23.75rem;
+    height: 54.69rem;
+}
+
+.question {
+    position: relative;
+    width: 58.75rem;
+    height: 12rem;
+    font-size: 2.25rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    background-color: #ffffff;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1rem;
+    line-height: 1.2;
+    box-shadow: 0 0.06rem 0.75rem #0c41f23d;
+    z-index: 10;
+}
+
+.questionOne {
+    position: absolute;
+    border-radius: 1.25rem 1.25rem 1.25rem 0;
+    top: -4.9rem;
+    left: 18.94rem;
+}
+
+.questionOne:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -1.25rem;
+    left: 0;
+    border-right: 1.56rem solid transparent;
+    border-top: 1.25rem solid #ffffff;
+}
+
+.questionTwo {
+    position: absolute;
+    border-radius: 1.25rem 1.25rem 0 1.25rem;
+    top: -2rem;
+    right: 20.8rem;
+    text-align: left;
+}
+
+.questionTwo:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -1.25rem;
+    right: 0;
+    border-top: 1.44rem solid #ffffff;
+    border-left: 1.69rem solid transparent;
+}
+
+.questionThree {
+    position: absolute;
+    border-radius: 1.25rem 1.25rem 1.25rem 0;
+    top: 1rem;
+    left: 26.2rem;
+}
+
+.questionThree:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -1.25rem;
+    left: 0;
+    border-right: 1.56rem solid transparent;
+    border-top: 1.25rem solid #ffffff;
+}
+
+.questionFour {
+    position: absolute;
+    border-radius: 1.25rem 1.25rem 0 1.25rem;
+    top: 3.6rem;
+    right: 24rem;
+    text-align: left;
+}
+
+.questionFour:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -1.25rem;
+    right: 0;
+    border-top: 1.44rem solid #ffffff;
+    border-left: 1.69rem solid transparent;
+}
+
