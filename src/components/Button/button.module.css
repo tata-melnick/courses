@@ -1,0 +1,39 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+
+.btnFilled {
+    padding: 20px 40px;
+    border-radius: 10px;
+    background: #E64A1A;
+    color: #ffffff;
+    font-size: 2rem;
+    transition: 0.2s;
+    font-weight: 400;
+    letter-spacing: 0.15rem;
+}
+
+.btnOutline {
+    background-color: #ffffff;
+    border-radius: 30px;
+    color: #000000;
+}
+
+.btnText {
+    color: #ffffff;
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
+    font-weight: 200;
+    background: none;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.btnText:last-child {
+    margin-left: 4rem;
+}
