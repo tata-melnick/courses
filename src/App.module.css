@@ -1,0 +1,46 @@
+/*:root {*/
+/*    font-family: "Montserrat", "Open Sans", "Segoe UI", "Roboto", sans-serif;*/
+/*    line-height: 1.5;*/
+/*    font-weight: 400;*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+
+/*    color-scheme: light dark;*/
+/*    color: var(--text--color);*/
+/*    background-color: var(--back--color);*/
+
+/*    font-synthesis: none;*/
+/*    text-rendering: optimizeLegibility;*/
+/*    -webkit-font-smoothing: antialiased;*/
+/*    -moz-osx-font-smoothing: grayscale;*/
+/*}*/
+
+/*.color {*/
+/*    --text--color: #000000;*/
+/*    --text--header: #ffffff;*/
+/*    --back--color: #ffffff;*/
+/*    --border--color: #6622ed;*/
+/*    --text--back: #743db6;*/
+/*    --btn--hover: #2e229c;*/
+/*    --btn--text: #f4f4f4;*/
+/*    --tab--back: #c969d9;*/
+/*    --tab--hover: #9d56c7;*/
+/*    --tab--color: #e64a1a;*/
+
+/*    --btn--back: #45459d;*/
+/*}*/
+
+/*@keyframes logo-spin {*/
+/*  from {*/
+/*    transform: rotate(0deg);*/
+/*  }*/
+/*  to {*/
+/*    transform: rotate(360deg);*/
+/*  }*/
+/*}*/
+
+/*@media (prefers-reduced-motion: no-preference) {*/
+/*  a:nth-of-type(2) .logo {*/
+/*    animation: logo-spin infinite 20s linear;*/
+/*  }*/
+/*}*/

@@ -1,12 +1,13 @@
-import React from 'react'
-import './App.css'
+import React from "react"
+import "./App.module.css"
+import Layout from "./Layout"
 
 const App: React.FC = () => {
-
-  return (
-    <div>
-    </div>
-  )
+    return (
+        <>
+            <Layout />
+        </>
+    )
 }
 
 export default App
