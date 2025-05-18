@@ -1,0 +1,69 @@
+.card {
+    background-color: #ffffff;
+    height: 100%;
+    width: 32%;
+    border-radius: 1.5rem;
+    padding: 1rem 3.12rem 3.12rem;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(8, 12.5%);
+    grid-template-areas:
+        "title title"
+        "img img"
+        "img img"
+        "img img"
+        "img img"
+        "term sum"
+        "term sum"
+        "btn btn";
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    grid-area: title;
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-align: center;
+    color: #292596;
+}
+
+.img {
+    grid-area: img;
+    text-align: center;
+    width: 30rem;
+    height: 17.5rem;
+}
+
+.term {
+    grid-area: term;
+    border-top: solid 0.13rem #ff3d00;
+    border-bottom: solid 0.13rem #ff3d00;
+    padding: 1.25rem 0;
+    text-align: center;
+    margin-bottom: 2.8rem;
+}
+
+.sum {
+    grid-area: sum;
+    border-top: solid 0.13rem #ff3d00;
+    border-bottom: solid 0.13rem #ff3d00;
+    padding: 1.25rem 0 1.25rem 1.5rem;
+    margin-bottom: 2.8rem;
+}
+
+.number {
+    color: #292596;
+    font-size: 2.25rem;
+    font-weight: 500;
+}
+
+.text {
+    color: #9e9898;
+    font-size: 1.38rem;
+}
+
+.btn {
+    grid-area: btn;
+    z-index: 2;
+}
