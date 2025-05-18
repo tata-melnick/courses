@@ -1,15 +1,15 @@
-import React, { SyntheticEvent } from "react"
+import React from "react"
 import cn from "classnames-ts"
 import styles from "./button.module.css"
 
 interface IButtonProps {
-    type?: "filled" | "text" | "outline" | "link"
+    type?: "filled" | "text"
     submit?: boolean
     link?: string
     className?: string
     children?: React.ReactNode
     onClick?(): void
-    handleClick?: React.MouseEventHandler<HTMLButtonElement>
+    uppercase?: boolean
 }
 
 const Button: React.FC<IButtonProps> = ({
@@ -17,25 +17,9 @@ const Button: React.FC<IButtonProps> = ({
     onClick,
     className,
     type = "text",
-    link,
     submit,
+    uppercase,
 }) => {
-    const handleClickLink = (e: SyntheticEvent) => {
-        e.preventDefault()
-        onClick?.()
-    }
-
-    if (link || type === "link")
-        return (
-            <a
-                onClick={onClick ? handleClickLink : undefined}
-                href={link}
-                className={cn(styles.btnLink, className)}
-            >
-                {children && children}
-            </a>
-        )
-
     return (
         <button
             onClick={onClick}
@@ -44,7 +28,7 @@ const Button: React.FC<IButtonProps> = ({
                 styles.btn,
                 type === "text" && styles.btnText,
                 type === "filled" && styles.btnFilled,
-                type === "outline" && styles.btnOutline,
+                uppercase && styles.uppercase,
                 className
             )}
         >

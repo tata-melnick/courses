@@ -116,6 +116,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
 .title {
     font-size: 64px;
     font-weight: bold;
@@ -139,6 +140,5 @@
 .btn {
     width: 465px;
     font-size: 2rem;
-    text-transform: uppercase;
     padding: 35px 45px;
 }

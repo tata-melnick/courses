@@ -53,7 +53,7 @@ const OfferSection: React.FC = () => {
                     <h2 className={styles.title}>Как превратить желания в</h2>
                     <div className={styles.emphasis}> действия?</div>
                 </div>
-                <Button type="filled" className={styles.btn}>
+                <Button type="filled" uppercase className={styles.btn}>
                     Выбрать курс
                 </Button>
             </div>

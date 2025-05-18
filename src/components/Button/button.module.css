@@ -33,9 +33,13 @@
 }
 
 .btnText:hover {
-    color: #E64A1A;
+    color: #ff835c;
 }
 
 .btnText:last-child {
     margin-left: 4rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
