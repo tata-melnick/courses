@@ -18,10 +18,8 @@
     letter-spacing: 0.15rem;
 }
 
-.btnOutline {
-    background-color: #ffffff;
-    border-radius: 30px;
-    color: #000000;
+.btnFilled:hover {
+    background: #ef6236;
 }
 
 .btnText {
@@ -32,6 +30,10 @@
     background: none;
     justify-content: flex-start;
     gap: 15px;
+}
+
+.btnText:hover {
+    color: #E64A1A;
 }
 
 .btnText:last-child {
