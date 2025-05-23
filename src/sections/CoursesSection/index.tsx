@@ -8,7 +8,7 @@ const CoursesSection: React.FC<SectionProps> = ({ style }) => {
     const list = CARDS
 
     return (
-        <section style={style} className={styles.section}>
+        <section id="courses" style={style} className={styles.section}>
             <h2 className={styles.title}>Наши курсы</h2>
             <div className={styles.cards}>
                 {list.map((item) => (

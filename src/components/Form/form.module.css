@@ -45,6 +45,7 @@
     flex-wrap: wrap;
     line-height: 1.5;
     gap: 0.3rem;
+    z-index: 5;
 }
 
 .link {

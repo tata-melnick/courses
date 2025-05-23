@@ -2,6 +2,7 @@ import React from "react"
 import styles from "./footer.module.css"
 import Button from "../Button"
 import { RocketIcon } from "../../icons"
+import scrollToElement from "../../helpers/scrollToSection"
 
 const Footer: React.FC = () => {
     return (
@@ -23,7 +24,11 @@ const Footer: React.FC = () => {
                 </Button>
             </div>
 
-            <Button link="#header" className={styles.btnRocket}>
+            <Button
+                link=""
+                onClick={() => scrollToElement("header", 80)}
+                className={styles.btnRocket}
+            >
                 <RocketIcon />
             </Button>
         </div>

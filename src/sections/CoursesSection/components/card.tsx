@@ -2,6 +2,7 @@ import React from "react"
 import styles from "./card.module.css"
 import { CardType } from "../../types"
 import Button from "../../../components/Button"
+import scrollToElement from "../../../helpers/scrollToSection"
 
 interface ICardProps {
     detail: CardType
@@ -34,7 +35,12 @@ const Card: React.FC<ICardProps> = ({ detail }) => {
                 <div className={styles.number}>{sum} ₽</div>
                 <div className={styles.text}>Стоимость</div>
             </div>
-            <Button type="filled" uppercase className={styles.btn}>
+            <Button
+                type="filled"
+                onClick={() => scrollToElement("feedback", 80)}
+                uppercase
+                className={styles.btn}
+            >
                 Записаться
             </Button>
         </div>

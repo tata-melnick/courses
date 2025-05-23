@@ -107,7 +107,7 @@
     border-radius: 1.3rem 1.3rem 1.3rem 0;
     top: -4.9rem;
     left: 18.9rem;
-    transition-delay: 0.3s;
+    transition-delay: 0.1s;
 }
 
 .questionOne:before {
@@ -127,7 +127,7 @@
     top: -2rem;
     right: 20.8rem;
     text-align: left;
-    transition-delay: 0.3s;
+    transition-delay: 0.1s;
 }
 
 .questionTwo:after {
@@ -146,7 +146,7 @@
     border-radius: 1.3rem 1.3rem 1.3rem 0;
     top: 1rem;
     left: 26.2rem;
-    transition-delay: 0.3s;
+    transition-delay: 0.1s;
 }
 
 .questionThree:before {
@@ -166,7 +166,7 @@
     top: 3.6rem;
     right: 24rem;
     text-align: left;
-    transition-delay: 0.3s;
+    transition-delay: 0.1s;
 }
 
 .questionFour:after {

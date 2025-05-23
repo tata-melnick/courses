@@ -18,7 +18,7 @@ const FeedbackSection: React.FC = () => {
         setEmail(e.target.value)
 
     return (
-        <section className={styles.section}>
+        <section id="feedback" className={styles.section}>
             <div className={styles.wrap}>
                 <div className={styles.contactWrap}>
                     <h2 className={styles.title}>

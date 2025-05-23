@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react"
 import styles from "./header.module.css"
 import Button from "../../components/Button"
 import mp4 from "./video.mp4"
+import scrollToElement from "../../helpers/scrollToSection"
 
 const Header: React.FC = () => {
     const ref = useRef<HTMLVideoElement>(null)
@@ -20,11 +21,22 @@ const Header: React.FC = () => {
                 loop
                 muted
             />
-
             <div className={styles.wrap}>
-                <div className={styles.btn}>
-                    <Button link="#">Курсы</Button>
-                    <Button link="#">Преподаватели</Button>
+                <div className={styles.btns}>
+                    <Button
+                        onClick={() => scrollToElement("courses", 1750)}
+                        link=""
+                        className={styles.btn}
+                    >
+                        Курсы
+                    </Button>
+                    <Button
+                        onClick={() => scrollToElement("teachers", 750)}
+                        link=""
+                        className={styles.btn}
+                    >
+                        Преподаватели
+                    </Button>
                 </div>
                 <div className={styles.logo}>ЛОГОТИП</div>
             </div>
@@ -36,7 +48,12 @@ const Header: React.FC = () => {
                     Освой профессию мечты, которая позволит
                     <br /> работать с любого уголка земного шара
                 </p>
-                <Button type="filled">Получить консультацию</Button>
+                <Button
+                    type="filled"
+                    onClick={() => scrollToElement("feedback", 80)}
+                >
+                    Получить консультацию
+                </Button>
             </div>
         </div>
     )

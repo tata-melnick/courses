@@ -3,6 +3,7 @@ import styles from "./offerSection.module.css"
 import Button from "../../components/Button"
 import cn from "classnames-ts"
 import { SectionProps } from "../types"
+import scrollToElement from "../../helpers/scrollToSection"
 
 const OfferSection: React.FC<SectionProps> = ({ style }) => {
     const [scrolled, setScrolled] = useState<boolean>(false)
@@ -54,7 +55,12 @@ const OfferSection: React.FC<SectionProps> = ({ style }) => {
                     <h2 className={styles.title}>Как превратить желания в</h2>
                     <div className={styles.emphasis}> действия?</div>
                 </div>
-                <Button type="filled" uppercase className={styles.btn}>
+                <Button
+                    type="filled"
+                    onClick={() => scrollToElement("courses", 800)}
+                    uppercase
+                    className={styles.btn}
+                >
                     Выбрать курс
                 </Button>
             </div>

@@ -18,7 +18,7 @@ const TeachersSection: React.FC = () => {
     const teacher = teachers[activeSlide]
 
     return (
-        <section className={styles.section}>
+        <section id="teachers" className={styles.section}>
             <h2 className={styles.title}>Преподаватели</h2>
             <div key={teacher.id} className={styles.teacher}>
                 <div className={styles.left}>

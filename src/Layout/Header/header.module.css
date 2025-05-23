@@ -33,7 +33,7 @@
     overflow: hidden;
 }
 
-.btn {
+.btns {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -42,9 +42,14 @@
     font-size: 1.5rem;
 }
 
-.btn > a:last-child {
+.btns > button:last-child {
     margin-left: 4.5rem;
 }
+
+.btns > button:hover {
+    color: #ff835c;
+}
+
 
 .logo {
     font-size: 1.5rem;

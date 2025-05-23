@@ -9,7 +9,6 @@ interface IButtonProps {
     className?: string
     children?: React.ReactNode
     onClick?(): void
-    onClick?(): void
     uppercase?: boolean
     onMouseEnter?(): void
     onMouseLeave?(): void
@@ -32,6 +31,7 @@ const Button: React.FC<IButtonProps> = ({
         e.preventDefault()
         onClick()
     }
+
     if (link || type === "link")
         return (
             <a
