@@ -1,16 +1,16 @@
-import React, { ChangeEvent } from "react"
+import React, { useState } from "react"
 import cn from "classnames-ts"
 import styles from "./checkbox.module.css"
 
 interface ICheckboxProps {
     value?: string
-    checked?: boolean
-    onChange?: (checked: boolean, value: string) => void
 }
 
-const Checkbox: React.FC<ICheckboxProps> = ({ value, checked, onChange }) => {
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        onChange(e.target.checked, value)
+const Checkbox: React.FC<ICheckboxProps> = ({ value }) => {
+    const [checked, setChecked] = useState<boolean>(false)
+
+    const handleChange = () => {
+        setChecked(!checked)
     }
     return (
         <div className={styles.label}>
@@ -24,7 +24,11 @@ const Checkbox: React.FC<ICheckboxProps> = ({ value, checked, onChange }) => {
                     onChange={handleChange}
                 />
             </label>
-            <span className={styles.labelText}>{value}</span>
+            <span
+                className={cn(styles.labelText, checked && styles.checkboxOn)}
+            >
+                {value}
+            </span>
         </div>
     )
 }

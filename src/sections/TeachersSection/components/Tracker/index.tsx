@@ -7,7 +7,7 @@ type TrackerProps = { profession: string }
 const trackerActive = {
     ["Аналитик"]: styles.analyst,
     ["Backend-разработчик"]: styles.back,
-    ["Frontend-разработчик"]: "front",
+    ["Frontend-разработчик"]: styles.front,
 }
 
 const Tracker: React.FC<TrackerProps> = ({ profession }) => {
@@ -20,7 +20,7 @@ const Tracker: React.FC<TrackerProps> = ({ profession }) => {
                 <div className={styles.img}>
                     <img
                         src={
-                            trackerActive[profession] === "front"
+                            trackerActive[profession] === styles.front
                                 ? "public/professionImg/front-colored.png"
                                 : "professionImg/front.png"
                         }
