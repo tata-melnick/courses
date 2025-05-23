@@ -18,7 +18,9 @@ const Footer: React.FC = () => {
             <div className={styles.info}>
                 <div className={styles.adress}>г. Москва, Проспект 2</div>
                 <div className={styles.copyright}>© 2025 ООО "КУРС"</div>
-                <Button link="#">Политика конфиденциальности</Button>
+                <Button link="public/documents/confidentiality.txt" download>
+                    Политика конфиденциальности
+                </Button>
             </div>
 
             <Button link="#header" className={styles.btnRocket}>

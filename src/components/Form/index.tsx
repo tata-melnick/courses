@@ -25,7 +25,8 @@ const Form: React.FC<IFormProps> = ({ children, submitForm }) => {
                 />
                 Ознакомлен с
                 <Button
-                    link="#"
+                    link="public/documents/confidentiality.txt"
+                    download
                     className={cn(styles.link, hover && styles.linkPersonal)}
                     onMouseLeave={onMouseLeave}
                     onMouseEnter={onMouseEnter}
@@ -33,7 +34,8 @@ const Form: React.FC<IFormProps> = ({ children, submitForm }) => {
                     Политикой в области обработки
                 </Button>
                 <Button
-                    link="#"
+                    link="public/documents/confidentiality.txt"
+                    download
                     className={cn(styles.link, hover && styles.linkPersonal)}
                     onMouseLeave={onMouseLeave}
                     onMouseEnter={onMouseEnter}
@@ -41,7 +43,11 @@ const Form: React.FC<IFormProps> = ({ children, submitForm }) => {
                     персональных данных
                 </Button>
                 и даю
-                <Button link="#" className={styles.link}>
+                <Button
+                    link="public/documents/consent-to-processing.txt"
+                    download
+                    className={styles.link}
+                >
                     согласие на их обработку
                 </Button>
             </div>

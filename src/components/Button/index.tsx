@@ -13,6 +13,7 @@ interface IButtonProps {
     uppercase?: boolean
     onMouseEnter?(): void
     onMouseLeave?(): void
+    download?: boolean
 }
 
 const Button: React.FC<IButtonProps> = ({
@@ -25,6 +26,7 @@ const Button: React.FC<IButtonProps> = ({
     uppercase,
     onMouseEnter,
     onMouseLeave,
+    download,
 }) => {
     const handleClickLink = (e: SyntheticEvent) => {
         e.preventDefault()
@@ -37,6 +39,7 @@ const Button: React.FC<IButtonProps> = ({
                 onMouseLeave={onMouseLeave}
                 onClick={onClick ? handleClickLink : undefined}
                 href={link}
+                download={download}
                 className={cn(styles.link, className)}
             >
                 {children && children}
