@@ -1,13 +1,13 @@
 import React from "react"
 import styles from "./card.module.css"
-import { CardType } from "../../../types"
+import { CardType } from "../../types"
 import Button from "../../../components/Button"
 
 interface ICardProps {
     detail: CardType
 }
 
-const CoursesSection: React.FC<ICardProps> = ({ detail }) => {
+const Card: React.FC<ICardProps> = ({ detail }) => {
     const { name, img, term, sum } = detail
 
     const getIssues = (num: number): string => {
@@ -41,4 +41,4 @@ const CoursesSection: React.FC<ICardProps> = ({ detail }) => {
     )
 }
 
-export default CoursesSection
+export default Card

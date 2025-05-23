@@ -8,9 +8,9 @@
 }
 
 .btnFilled {
-    padding: 20px 40px;
-    border-radius: 10px;
-    background: #E64A1A;
+    padding: 1.3rem 2.5rem;
+    border-radius: 0.6rem;
+    background: #e64a1a;
     color: #ffffff;
     font-size: 2rem;
     transition: 0.2s;
@@ -29,15 +29,16 @@
     font-weight: 200;
     background: none;
     justify-content: flex-start;
-    gap: 15px;
+    gap: 1rem;
 }
 
-.btnText:hover {
+.link {
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.link:hover {
     color: #ff835c;
-}
-
-.btnText:last-child {
-    margin-left: 4rem;
 }
 
 .uppercase {

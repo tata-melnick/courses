@@ -1,15 +1,18 @@
-import React from "react"
+import React, { SyntheticEvent } from "react"
 import cn from "classnames-ts"
 import styles from "./button.module.css"
 
 interface IButtonProps {
-    type?: "filled" | "text"
+    type?: "filled" | "text" | "link"
     submit?: boolean
     link?: string
     className?: string
     children?: React.ReactNode
     onClick?(): void
+    onClick?(): void
     uppercase?: boolean
+    onMouseEnter?(): void
+    onMouseLeave?(): void
 }
 
 const Button: React.FC<IButtonProps> = ({
@@ -17,9 +20,28 @@ const Button: React.FC<IButtonProps> = ({
     onClick,
     className,
     type = "text",
+    link,
     submit,
     uppercase,
+    onMouseEnter,
+    onMouseLeave,
 }) => {
+    const handleClickLink = (e: SyntheticEvent) => {
+        e.preventDefault()
+        onClick()
+    }
+    if (link || type === "link")
+        return (
+            <a
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+                onClick={onClick ? handleClickLink : undefined}
+                href={link}
+                className={cn(styles.link, className)}
+            >
+                {children && children}
+            </a>
+        )
     return (
         <button
             onClick={onClick}

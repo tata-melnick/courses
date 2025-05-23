@@ -3,7 +3,7 @@
     height: 100%;
     width: 32%;
     border-radius: 1.5rem;
-    padding: 1rem 3.12rem 3.12rem;
+    padding: 1rem 3.1rem 3.1rem;
     display: grid;
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(8, 12.5%);
@@ -22,7 +22,7 @@
 
 .title {
     grid-area: title;
-    font-size: 2.25rem;
+    font-size: 2.3rem;
     font-weight: bold;
     text-align: center;
     color: #292596;
@@ -37,30 +37,30 @@
 
 .term {
     grid-area: term;
-    border-top: solid 0.13rem #ff3d00;
-    border-bottom: solid 0.13rem #ff3d00;
-    padding: 1.25rem 0;
+    border-top: solid 2px #ff3d00;
+    border-bottom: solid 2px #ff3d00;
+    padding: 1.3rem 0;
     text-align: center;
     margin-bottom: 2.8rem;
 }
 
 .sum {
     grid-area: sum;
-    border-top: solid 0.13rem #ff3d00;
-    border-bottom: solid 0.13rem #ff3d00;
-    padding: 1.25rem 0 1.25rem 1.5rem;
+    border-top: solid 2px #ff3d00;
+    border-bottom: solid 2px #ff3d00;
+    padding: 1.3rem 0 1.3rem 1.5rem;
     margin-bottom: 2.8rem;
 }
 
 .number {
     color: #292596;
-    font-size: 2.25rem;
+    font-size: 2.3rem;
     font-weight: 500;
 }
 
 .text {
     color: #9e9898;
-    font-size: 1.38rem;
+    font-size: 1.4rem;
 }
 
 .btn {

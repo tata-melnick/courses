@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import styles from "./motivationalSection.module.css"
 import cn from "classnames-ts"
+import { SectionProps } from "../types"
 
 const defaultScrolled: Record<number, boolean> = {
     1: false,
@@ -9,7 +10,7 @@ const defaultScrolled: Record<number, boolean> = {
     4: false,
 }
 
-const MotivationalSection: React.FC = () => {
+const MotivationalSection: React.FC<SectionProps> = () => {
     const [scrolled, setScrolled] = useState(defaultScrolled)
 
     useEffect(() => {
@@ -40,7 +41,7 @@ const MotivationalSection: React.FC = () => {
     }, [scrolled])
 
     return (
-        <div className={styles.section}>
+        <section className={styles.section}>
             <div className={styles.wrap}>
                 <div className={styles.container}>
                     <div className={cn(styles.person, styles.personOne)}>
@@ -100,7 +101,7 @@ const MotivationalSection: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

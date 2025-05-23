@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react"
 import styles from "./offerSection.module.css"
 import Button from "../../components/Button"
 import cn from "classnames-ts"
+import { SectionProps } from "../types"
 
-const OfferSection: React.FC = () => {
+const OfferSection: React.FC<SectionProps> = ({ style }) => {
     const [scrolled, setScrolled] = useState<boolean>(false)
 
     useEffect(() => {
@@ -17,8 +18,8 @@ const OfferSection: React.FC = () => {
     }, [scrolled])
 
     return (
-        <div className={styles.offer}>
-            <div className={styles.wrap}>
+        <section style={style} className={styles.section}>
+            <div className={styles.offer}>
                 <div className={styles.messageWrap}>
                     <div
                         className={cn(
@@ -57,7 +58,7 @@ const OfferSection: React.FC = () => {
                     Выбрать курс
                 </Button>
             </div>
-        </div>
+        </section>
     )
 }
 
