@@ -23,7 +23,6 @@ const Footer: React.FC = () => {
                     Политика конфиденциальности
                 </Button>
             </div>
-
             <Button
                 link=""
                 onClick={() => scrollToElement("header", 80)}
