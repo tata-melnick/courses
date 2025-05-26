@@ -1,22 +1,28 @@
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 import cn from "classnames-ts"
 import styles from "./form.module.css"
 import Button from "../Button"
 import Checkbox from "../Checkbox"
+import ReCAPTCHA from "react-google-recaptcha"
 
 interface IFormProps {
     children?: React.ReactNode
-    submitForm?(): void
 }
 
-const Form: React.FC<IFormProps> = ({ children, submitForm }) => {
+const Form: React.FC<IFormProps> = ({ children }) => {
     const [hover, setHover] = useState(false)
+    const recaptchaRef = useRef<ReCAPTCHA>(null)
 
     const onMouseEnter = () => setHover(true)
     const onMouseLeave = () => setHover(false)
 
+    const onSubmit = () => {
+        const token = recaptchaRef.current.getValue()
+        console.log("reCAPTCHA token:", token) // Здесь можно отправить токен на сервер для верификации
+    }
+
     return (
-        <form onSubmit={submitForm} className={cn("form", styles.container)}>
+        <form onSubmit={onSubmit} className={cn("form", styles.container)}>
             <div className={styles.input}>{children}</div>
             <div className={styles.text}>
                 <Checkbox
@@ -52,8 +58,11 @@ const Form: React.FC<IFormProps> = ({ children, submitForm }) => {
                 </Button>
             </div>
             <div className={styles.wrap}>
-                <div className={styles.captcha}></div>
-                <Button type="filled" uppercase className={styles.btn}>
+                <ReCAPTCHA
+                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                    ref={recaptchaRef}
+                />
+                <Button type="filled" submit uppercase className={styles.btn}>
                     Отправить
                 </Button>
             </div>

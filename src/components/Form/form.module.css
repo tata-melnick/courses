@@ -35,6 +35,7 @@
 .input {
     margin-bottom: 1.3rem;
     width: 100%;
+    z-index: 5;
 }
 
 .text {
@@ -66,21 +67,30 @@
     position: relative;
 }
 
-.captcha {
+.wrap > div {
     width: 48%;
     height: 5.4rem;
-    background-image: url("/public/captcha.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
 }
 
-.captcha:before {
+.wrap > div:before {
     content: "";
     position: absolute;
     width: 14.5rem;
     height: 15.3rem;
     bottom: -16rem;
     left: -23rem;
+    background-image: url("/public/circle.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrap > div:after {
+    content: "";
+    position: absolute;
+    width: 19.5rem;
+    height: 19.3rem;
+    top: -15.8rem;
+    left: 2.5rem;
     background-image: url("/public/circle.png");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -94,14 +104,4 @@
     z-index: 3;
 }
 
-.btn:before {
-    content: "";
-    position: absolute;
-    width: 19.5rem;
-    height: 19.3rem;
-    top: -14.8rem;
-    left: -20.5rem;
-    background-image: url("/public/circle.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
+
